@@ -1,0 +1,30 @@
+@mixin btn-menu-close {
+  @apply text-4xl p-2 opacity-80 text-primary;
+}
+
+.Header {
+  @apply relative py-3 px-2 w-full;
+
+  &__btn-menu {
+    @include btn-menu-close;
+  }
+
+  &__nav {
+    @apply fixed h-screen top-0 left-0 right-0 bottom-0 flex flex-col justify-between bg-background-dark;
+
+    &__close-btn-area {
+      @apply py-3 px-2;
+      &__btn-close {
+        @include btn-menu-close;
+      }
+    }
+
+    &__ul {
+      @apply w-full flex flex-col gap-5 items-center text-2xl;
+    }
+
+    &__contact {
+      @apply py-5 flex gap-5 items-center justify-center text-3xl;
+    }
+  }
+}
