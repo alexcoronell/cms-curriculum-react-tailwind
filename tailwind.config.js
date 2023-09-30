@@ -7,9 +7,9 @@ export default {
   theme: {
     colors: {
       'transparent': 'transparent',
-      'background': '#23272f',
+      'background-dark': '#23272f',
       'background-light': '#343a46',
-      'background-dark': '#252f44',
+      'background': '#252f44',
       'primary': '#1f3239',
       'black': '#000',
       'white': '#FFF',
