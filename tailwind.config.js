@@ -5,6 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      'transparent': 'transparent',
+      'background': '#23272f',
+      'background-light': '#343a46',
+      'background-dark': '#252f44',
+      'primary': '#1f3239',
+      'black': '#000',
+      'white': '#FFF',
+      'facebook': '#3b5998',
+      'twitter': '1da1f2',
+    },
     screens: {
       'sm': '576px',
       'md': '768px',
