@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "wouter";
 
 import { MdMenu } from "react-icons/md";
@@ -13,39 +14,42 @@ import {
 import "./styles.scss";
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const onShowMenu = (value) => setShowMenu(value)
+
   return (
     <header className="Header">
-      <button className="Header__btn-menu">
+      <button className="Header__btn-menu" onClick={() => onShowMenu(true)}>
         <MdMenu />
       </button>
-      <nav className="Header__nav">
+      <nav className={showMenu ? 'Header__nav showMenu' : 'Header__nav'} id="menu">
         <div className="Header__nav__close-btn-area">
-          <button className="Header__nav__close-btn-area__btn-close">
+          <button className="Header__nav__close-btn-area__btn-close" onClick={() => onShowMenu(false)}>
             <AiOutlineClose />
           </button>
         </div>
         {/* Menu */}
         <ul className="Header__nav__ul">
           <li>
-            <Link href="/">Home</Link>
+            <Link onClick={() => onShowMenu(false)} href="/">Home</Link>
           </li>
           <li>
-            <Link href="/experiences">Experiences</Link>
+            <Link onClick={() => onShowMenu(false)} href="/experiences">Experiences</Link>
           </li>
           <li>
-            <Link href="/studies">Studies</Link>
+            <Link onClick={() => onShowMenu(false)} href="/studies">Studies</Link>
           </li>
           <li>
-            <Link href="/training">Training</Link>
+            <Link onClick={() => onShowMenu(false)} href="/training">Training</Link>
           </li>
           <li>
-            <Link href="/briefcase">Briefcase</Link>
+            <Link onClick={() => onShowMenu(false)} href="/briefcase">Briefcase</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link onClick={() => onShowMenu(false)} href="/contact">Contact</Link>
           </li>
           <li>
-            <Link href="/login">Login</Link>
+            <Link onClick={() => onShowMenu(false)} href="/login">Login</Link>
           </li>
         </ul>
 

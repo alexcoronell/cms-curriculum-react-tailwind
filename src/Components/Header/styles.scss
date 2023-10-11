@@ -10,7 +10,7 @@
   }
 
   &__nav {
-    @apply fixed h-screen top-0 left-0 right-0 bottom-0 flex flex-col justify-between bg-background-dark;
+    @apply fixed h-screen top-[-100%] left-0 right-0 bottom-0 flex flex-col justify-between bg-background-dark transition-all duration-500;
 
     &__close-btn-area {
       @apply py-3 px-2;
@@ -27,4 +27,8 @@
       @apply py-5 flex gap-5 items-center justify-center text-3xl;
     }
   }
+}
+
+.showMenu {
+  @apply top-0;
 }
