@@ -1,0 +1,19 @@
+.Home {
+  @apply w-screen h-full py-10;
+  &__contain {
+    @apply h-full grid grid-rows-[60%,40%] gap-5 lg:grid-rows-none lg:grid-cols-2 lg:gap-10;
+
+    &__imageBox, &__nameTitle {
+        @apply flex flex-col items-center justify-center;
+    }
+    &__imageBox {
+        @apply p-3 lg:items-end ;
+        img {
+            @apply w-full object-cover max-w-[400px] xl:max-w-[450px];
+        }
+    }
+    &__nameTitle {
+        @apply gap-3 lg:items-start;
+    }
+  }
+}
