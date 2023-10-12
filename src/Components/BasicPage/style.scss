@@ -1,0 +1,9 @@
+.BasicPage {
+    @apply w-full flex-1 flex flex-col justify-start items-center;
+    &__titleArea {
+        @apply py-3;
+    }
+    &__content {
+        @apply py-3 px-2 flex-1 flex w-full;
+    }
+}

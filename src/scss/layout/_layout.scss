@@ -4,3 +4,6 @@ body {
 #root {
     @apply min-h-screen w-full flex flex-col justify-between items-center bg-background p-0 m-0;
 }
+.content {
+    @apply w-full flex-1;
+}

@@ -1,0 +1,10 @@
+.form-group {
+    @apply flex flex-col py-3;
+
+    label {
+        @apply text-primary mb-0;
+    }
+    input {
+        @apply outline-none mt-0 pb-1 pt-2 bg-transparent border-b border-primary/40 focus:border-primary/100;
+    }
+}

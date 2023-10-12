@@ -1,0 +1,6 @@
+.Login {
+    @apply flex justify-center items-center;
+    &__box {
+        @apply w-full max-w-[360px] p-5 bg-background-dark rounded-xl;
+    }
+}
