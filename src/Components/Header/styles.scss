@@ -10,7 +10,7 @@
   }
 
   &__nav {
-    @apply fixed h-screen top-[-100%] left-0 right-0 bottom-0 flex flex-col justify-between bg-background-dark transition-all duration-500 md:top-0 md:w-1/2 md:left-[-50%] lg:w-1/3 lg:left-[-33%] xl:w-1/4 xl:left-[-25%] 2xl:w-1/5 2xl:left-[-20%];
+    @apply fixed h-screen top-[-100%] left-0 right-0 bottom-0 flex flex-col justify-between bg-dark transition-all duration-500 md:top-0 md:w-1/2 md:left-[-50%] lg:w-1/3 lg:left-[-33%] xl:w-1/4 xl:left-[-25%] 2xl:w-1/5 2xl:left-[-20%];
 
     &__close-btn-area {
       @apply py-3 px-2;

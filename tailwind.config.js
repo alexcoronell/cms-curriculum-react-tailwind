@@ -7,10 +7,10 @@ export default {
   theme: {
     colors: {
       'transparent': 'transparent',
-      'background-dark': '#23272f',
       'background-light': '#343a46',
       'background': '#252f44',
       'primary': '#61dbfb',
+      'dark': '#23272f',
       'black': '#000000',
       'white': '#FFFFFF',
       'red': 'FF0000',
