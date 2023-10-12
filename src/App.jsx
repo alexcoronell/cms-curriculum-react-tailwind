@@ -6,7 +6,7 @@ import Footer from "./Components/Footer/Footer";
 
 /* Component Pages */
 import Home from "./Pages/Home/Home";
-import Experiences from "./Pages/Experiences/Experiences";
+import Experiences from "./Pages/Experiences";
 import Studies from "./Pages/Studies/Studies";
 import Training from "./Pages/Training/Training";
 import Briefcase from "./Pages/Briefcase/Briefcase";
