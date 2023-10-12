@@ -5,13 +5,13 @@ import Layout from "./Layout/Layout";
 import Footer from "./Components/Footer/Footer";
 
 /* Component Pages */
-import Home from "./Pages/Home/Home";
+import Home from "./Pages/Home";
 import Experiences from "./Pages/Experiences";
-import Studies from "./Pages/Studies/Studies";
-import Training from "./Pages/Training/Training";
-import Briefcase from "./Pages/Briefcase/Briefcase";
-import Contact from "./Pages/Contact/Contact";
-import Login from "./Pages/Login/Login";
+import Studies from "./Pages/Studies";
+import Training from "./Pages/Training";
+import Briefcase from "./Pages/Briefcase";
+import Contact from "./Pages/Contact";
+import Login from "./Pages/Login";
 
 function App() {
   return (
