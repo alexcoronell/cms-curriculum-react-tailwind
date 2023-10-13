@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import {  signInWithEmailAndPassword } from "firebase/auth";
+import { navigate } from "wouter/use-location";
 
 /* Components */
 import BasicPage from "../../Components/BasicPage";
@@ -7,11 +8,15 @@ import BasicPage from "../../Components/BasicPage";
 /* Firebase */
 import { auth } from "../../firebase/firebase-config";
 
+/* Context */
+import { AppContext } from "../../Context";
+
 /* Styles */
 import "./style.scss";
 
 const Login = () => {
   const titlePage = "Login";
+  const context = useContext(AppContext)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,12 +24,17 @@ const Login = () => {
     e.preventDefault();
     try {
       const res =  await signInWithEmailAndPassword(auth, email, password);
-      console.log(res);
+      context.setUser(await res.user)
+      localStorage.setItem('user', await JSON.stringify(res.user));
     }
     catch (e) {
       console.error(e)
     }
   };
+
+  useEffect(() => {
+    if(context.user) navigate('/')
+  }, [context.user])
 
   return (
     <BasicPage titlePage={titlePage}>
