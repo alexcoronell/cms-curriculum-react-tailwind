@@ -1,0 +1,13 @@
+.AdminMenu {
+    &__nav {
+        &__ul {
+            @apply  flex flex-col items-center list-none no-underline gap-3;
+            &__li {
+                @apply w-full max-w-[350px];
+                &__button {
+                    @apply border border-primary w-full py-3 rounded-xl text-primary lg:hover:bg-primary/20 hover:shadow hover:shadow-primary transition-all duration-300;
+                }
+            }
+        }
+    }
+}

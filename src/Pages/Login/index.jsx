@@ -26,6 +26,7 @@ const Login = () => {
       const res =  await signInWithEmailAndPassword(auth, email, password);
       context.setUser(await res.user)
       localStorage.setItem('user', await JSON.stringify(res.user));
+      navigate('/admin');
     }
     catch (e) {
       console.error(e)
