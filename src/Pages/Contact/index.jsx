@@ -1,5 +1,17 @@
+/* Components */
+import BasicPage from '../../Components/BasicPage';
+
+/* Styles */
+import './style.scss';
+
 const Contact = () => {
-  return <h1>Contact</h1>;
+  const titlePage = 'Contact';
+
+  return <BasicPage titlePage={titlePage}>
+    <div className="Contact content">
+      Contact
+    </div>
+  </BasicPage>
 };
 
 export default Contact;

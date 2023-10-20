@@ -1,5 +1,17 @@
+/* Components */
+import BasicPage from '../../Components/BasicPage';
+
+/* Styles */
+import './style.scss';
+
 const Briefcase = () => {
-  return <h1>Briefcase</h1>;
+  const titlePage = 'Briefcase';
+
+  return <BasicPage titlePage={titlePage}>
+    <div className="Briefcase content">
+      Briefcase
+    </div>
+  </BasicPage>
 };
 
 export default Briefcase;

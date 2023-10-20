@@ -1,5 +1,17 @@
+/* Components */
+import BasicPage from '../../Components/BasicPage';
+
+/* Styles */
+import './style.scss';
+
 const Studies = () => {
-  return <h1>Studies</h1>;
+  const titlePage = 'Studies';
+
+  return <BasicPage titlePage={titlePage}>
+    <div className="Studies content">
+      Studies
+    </div>
+  </BasicPage>
 };
 
 export default Studies;
