@@ -1,0 +1,52 @@
+.BasicData {
+  &__content {
+    &__form {
+      @apply lg:grid lg:grid-cols-2 lg:gap-3;
+      &__image {
+        @apply flex items-center justify-center py-5;
+        img {
+          @apply box-content w-5/6;
+        }
+      }
+      &__basicInputs {
+        @apply md:grid md:grid-cols-2 gap-3 lg:grid-cols-1 lg:gap-0;
+      }
+      &__buttonsArea {
+        @apply md:flex md:gap-3;
+      }
+      &__imageInput,
+      &__basicInputs {
+        @apply md:mb-5;
+      }
+    }
+  }
+}
+
+@media(min-width: 992px)  {
+  .BasicData {
+    &__content {
+      &__form {
+        grid-template-areas:
+        "image basicData"
+        "image inputImage"
+        "buttons buttons";
+        &__image {
+            grid-area: image;
+        }
+        &__imageInput {
+          grid-area: inputImage;
+        }
+        &__basicInputs {
+          grid-area: basicData;
+        }
+        &__buttonsArea {
+          grid-area: buttons;;
+        }
+        &__imageInput,
+        &__basicInputs {
+          @apply md:mb-5;
+        }
+      }
+    }
+  }
+}
