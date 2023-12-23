@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import {  signInWithEmailAndPassword } from "firebase/auth";
 import { navigate } from "wouter/use-location";
+import Swal from "sweetalert2/dist/sweetalert2.js";
 
 /* Components */
 import BasicPage from "../../Components/BasicPage";
@@ -12,6 +13,7 @@ import { auth } from "../../firebase/firebase-config";
 import { AppContext } from "../../Context";
 
 /* Styles */
+import "sweetalert2/src/sweetalert2.scss";
 import "./style.scss";
 
 const Login = () => {
@@ -29,7 +31,18 @@ const Login = () => {
       navigate('/admin');
     }
     catch (e) {
-      console.error(e)
+      let text = 'Please, refresh the page and try again'
+      if(e.code === 'auth/invalid-login-credentials') {
+        text = "Incorrect username or password"
+      } else {
+        console.error(e);
+      }
+      Swal.fire({
+        title: "Error!",
+        text: text,
+        icon: "error",
+        confirmButtonText: "Ok",
+      });
     }
   };
 
